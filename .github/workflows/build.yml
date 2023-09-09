@@ -28,9 +28,6 @@ jobs:
     strategy:
         matrix:
           include:
-            - boardfamily: meson-g12b
-              branch: current
-              representative: Odroid N2
             - boardfamily: meson-gxl
               branch: current
               representative: aml-s9xx-box
@@ -47,7 +44,7 @@ jobs:
 
       - uses: actions/checkout@v3
         with:
-          repository: armbian/build
+          repository: 3n2bike/armbian_build
           path: build
           ref: ${{ github.event.inputs.build_repo_branch }}
 
